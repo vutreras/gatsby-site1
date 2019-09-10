@@ -1,10 +1,19 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-site1",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "npm install --no-optional && gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "pretest": "npm install --no-optional",
+    "test": "gatsby build && ./node_modules/.bin/wdio wdio.conf.js"
+  },
   "dependencies": {
+    "express": "^4.17.1",
     "gatsby": "^2.15.14",
     "gatsby-image": "^2.2.18",
     "gatsby-plugin-manifest": "^2.2.16",
@@ -19,25 +28,16 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "@wdio/cli": "~5.12.5",
+    "@wdio/local-runner": "^5.12.5",
+    "@wdio/mocha-framework": "^5.12.1",
+    "@wdio/spec-reporter": "^5.12.1",
+    "@wdio/sync": "^5.12.3",
+    "wdio-chromedriver-service": "~5.0.2",
+    "chromedriver": "^76.0.1",
+    "chai": "~4.2.0",
+    "mocha": "~5.2.0",
+    "nock": "~10.0.6",
     "prettier": "^1.18.2"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
